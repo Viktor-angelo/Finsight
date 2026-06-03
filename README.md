@@ -38,6 +38,7 @@ Understand fullstack development
 Practice authentication systems
 Work with APIs and databases
 Improve UI/UX design skills
-👨‍💻 Author
+
+  Author
 
 Developed by Viktor Angelo
