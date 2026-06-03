@@ -1,0 +1,130 @@
+.containerHistoric{
+  margin-right: 40vh;
+     color: white;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+   min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+    background:  linear-gradient(
+    135deg,
+    #020617 0%,
+    #06141B 50%,
+    #0B2E3F 100%
+  );;
+  align-items: center;
+  
+}
+.backFloating {
+  position: fixed;
+  top: 20px;
+  left: 40px;
+
+  background: #3b82f6;
+  color: white;
+  border: none;
+
+
+  border-radius: 50%;
+
+  cursor: pointer;
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size:1.9rem;
+margin-left: 5vh;
+  z-index: 999;
+}
+
+.backFloating:hover {
+  background: #2563eb;
+}
+.contentWrapper {
+  width: 70%;
+  max-width: 1200px;
+}
+
+
+.containerHistoric h1,
+.containerHistoric p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+
+.navHistory {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 12px 0;
+  font-weight: bold;
+  opacity: 0.7;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.containerFinance {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 12px 0;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.2s;
+}
+
+
+.containerFinance:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+
+
+.containerFinance {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 12px;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.2s;
+}
+
+.containerFinance:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+.income {
+  color: #22c55e;
+}
+
+.expense {
+  color: #ef4444;
+}
+
+.balance {
+  color: #38bdf8;
+}
+
+.deleteBtn {
+  background: transparent;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+@media(max-width:768px){
+  .backFloating{
+    left: -25px;
+  }
+}
