@@ -1,167 +1,189 @@
 .containerCentral{
     color: white;
     overflow: hidden;
-
-  font-family: 'Poppins', sans-serif;
-  width: 100%;
-   min-height: 100vh;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-background:  linear-gradient(
-    135deg,
-    #020617 0%,
-    #06141B 50%,
-    #0B2E3F 100%
-  );;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(
+        135deg,
+        #020617 0%,
+        #06141B 50%,
+        #0B2E3F 100%
+    );
     align-items: center;
 }
+
 .containerModel{
-    
     border-radius:40px;
     display: flex;
     flex-direction:column;
-  grid-template-columns: repeat(6, 1fr);
-  padding: 52px 0;
-  background:  linear-gradient(
-    135deg,
-    #020617 0%,
-    #06141B 50%,
-    #0B2E3F 100%
-  );;
-  margin-top:10px;
-  width:720px;
-  align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: 0.2s;
-  
+    padding: 52px 20px;
+    background: linear-gradient(
+        135deg,
+        #020617 0%,
+        #06141B 50%,
+        #0B2E3F 100%
+    );
+    width: 100%;
+    max-width: 720px;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.2s;
+}
 
-}
 .containerModel h1{
-    font-size:3rem
+    font-size:3rem;
+    margin-bottom: 20px;
 }
-.containerModel input, .containerModel button{
-    padding:10px;
-    height:20px;
-    margin:20px auto;
-    width:100%;
-    display: grid;
-}
-.containerModel input{
-      background: transparent;
-      font-size:1rem;
-    border:none;
-    width:480px
-}
-.containerModel button{
-    height: 100%;
-    border-radius:10px;
-     background: linear-gradient(90deg, #3b82f6, #2563eb);
-box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
-transition: 0.3s;
-color:white;
-border:none;
-padding:20px;
-font-size:1.1rem;
-}
+
 .subP{
     margin-top:10px;
-    max-width:300px
+    margin-bottom: 20px;
+    max-width:300px;
+    text-align: center;
 }
+
+.containerModel input, 
+.containerModel button{
+    padding:10px;
+    margin:10px 0;
+    width:100%;
+}
+
+.containerModel input{
+    background: transparent;
+    font-size:1rem;
+    border:none;
+}
+
+.containerModel button{
+    border-radius:10px;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+    transition: 0.3s;
+    color:white;
+    border:none;
+    padding:20px;
+    font-size:1.1rem;
+}
+
 .containerModel button:hover{
     transform: scale(1.03);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
+
 .inputGroup {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  width: 100%;
-  margin: 15px 0;
-  padding: 5px;
-
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .inputGroup svg {
-  color: #3b82f6;
+    color: #3b82f6;
 }
-
 
 .inputGroup input {
-  flex: 1; 
-  background: transparent;
-  border: none;
-  outline: none;
-  color: white;
+    flex: 1; 
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
 }
+
 .inputGroup input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
-  -webkit-text-fill-color: white !important; /* ou a cor do seu texto */
-  transition: background-color 5000s ease-in-out 0s;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 .inputGroup input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
 }
+
 .Login{
-  margin-left: auto;
-  
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
+
 .btnLogin{
-  margin-right: 2vh;
-  padding: 15px 25px;
-  border-radius: 50px;
-  font-size: 1.3rem;
-  cursor: pointer;
-  border: none;
-  margin-top: 20px;
-  background: linear-gradient(135deg, #3B82F6, #1D4ED8);
-  color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+    color: white;
 }
 
 .btnLogin:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
 }
+
+.newLogo2{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
 .newLogo2 h1{
     font-size: 1.5rem;
-  color: white;
-  margin: 0;
+    color: white;
+    margin: 0;
 }
-.newLogo2{
-   position: absolute;
-  top: 20px;
-  left: 20px;
 
-  display: flex;
-  align-items: center;
-  gap: 10px; 
-}
 .newLogo2 img{
-
-  transform: rotate(-90deg);
-  transition: transform 0.8s ease;
-
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-
-  border: 3px solid #1e3a8a;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: rotate(-90deg);
+    transition: transform 0.8s ease;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1e3a8a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .newLogo2 img:hover {
-  transform: rotate(270deg) scale(1.10);
-  box-shadow: 0 10px 40px rgba(30, 58, 138, 0.6);
+    transform: rotate(270deg) scale(1.10);
+    box-shadow: 0 10px 40px rgba(30, 58, 138, 0.6);
 }
+
 @media(max-width: 768px){
-  .newLogo{
-    position: relative;
-    left: 120vh;   
-  }
+
+    .containerModel {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    .containerModel h1 {
+        font-size: 2rem;
+    }
+
+    .btnLogin {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+
+    .newLogo2 img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .newLogo2 h1{
+        font-size: 1.2rem;
+    }
 }
