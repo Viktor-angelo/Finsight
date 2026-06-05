@@ -6,7 +6,7 @@ import "./Modal.css";
 
 function Login() {
   const navigate = useNavigate();
-  const { login } = useContext(AuthContext); 
+  const { login } = useContext(AuthContext);
 
   const [formData, setFormData] = useState({
     email: "",
@@ -40,17 +40,18 @@ function Login() {
 
       const data = await response.json();
 
-      if (!data.success) {
-        alert(data.error || "invalid email or password");
+      if (!response.ok) {
+        alert(data.error || "Login failed");
         return;
       }
 
-      login(data.user);
+      login(data);
 
       alert("Login successful!");
-      navigate("/home", { replace: true }); 
+      navigate("/home", { replace: true });
+
     } catch (error) {
-      console.log(error);
+      console.error(error);
       alert("Error connecting to the server");
     } finally {
       setLoading(false);
@@ -92,7 +93,7 @@ function Login() {
             <input
               type="password"
               id="password"
-              placeholder="Senha"
+              placeholder="Password"
               value={formData.password}
               onChange={handleChange}
               required
