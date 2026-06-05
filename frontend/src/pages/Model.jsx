@@ -23,7 +23,7 @@ function Model() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://finsight-jer5.onrender.com/", {
+      const response = await fetch("https://finsight-jer5.onrender.com/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

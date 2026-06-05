@@ -25,7 +25,7 @@ export default function Dashboard() {
     setFinancas(updated);
     localStorage.setItem("history", JSON.stringify(updated));
 
-    fetch(`https://finsight-jer5.onrender.com/${id}`, {
+    fetch(`https://finsight-jer5.onrender.com/financas/${id}`, {
       method: "DELETE",
     }).catch(() => {});
   };

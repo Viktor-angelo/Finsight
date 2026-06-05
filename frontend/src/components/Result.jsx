@@ -92,7 +92,7 @@ function Result({ formData }) {
     saveHistory(payload);
 
 
-    fetch"https://finsight-jer5.onrender.com/", {
+    fetch("https://finsight-jer5.onrender.com/financas/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
