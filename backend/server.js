@@ -8,14 +8,23 @@ const prisma = new PrismaClient();
 const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:5173",
-  "https://finsight-frontend.onrender.com",
+
+  "https://finsight-5hpf.vercel.app",
+  "https://finsight-5hpf-git-main-viktor-angelo.vercel.app",
+  "https://finsight-5hpf-2zmercgql-viktor-angelo.vercel.app",
 ];
 
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
-  }),
+  })
 );
 
 app.use(express.json());
@@ -23,6 +32,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.json({ message: "API running" });
 });
+
 
 app.get("/users", async (req, res) => {
   try {
@@ -51,7 +61,7 @@ app.post("/users", async (req, res) => {
     });
 
     res.json(user);
-  } catch {
+  } catch (err) {
     res.status(500).json({ error: "Error creating user" });
   }
 });
@@ -78,7 +88,6 @@ app.post("/login", async (req, res) => {
   }
 });
 
-/* ===== FINANCAS ROUTES ===== */
 
 app.get("/financas", async (req, res) => {
   try {
@@ -115,17 +124,17 @@ app.post("/financas", async (req, res) => {
       data: {
         name,
         email,
-        monthly,
-        rent,
-        food,
-        extra,
+        monthly: Number(monthly),
+        rent: Number(rent),
+        food: Number(food),
+        extra: extra ? Number(extra) : null,
         month,
         userId,
       },
     });
 
     res.json(finance);
-  } catch {
+  } catch (err) {
     res.status(500).json({ error: "Error creating finance" });
   }
 });
@@ -158,6 +167,7 @@ app.delete("/financas/:id", async (req, res) => {
     res.status(500).json({ error: "Error deleting finance" });
   }
 });
+
 
 const PORT = process.env.PORT || 3000;
 
