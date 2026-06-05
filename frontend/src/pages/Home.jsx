@@ -13,7 +13,6 @@ export default function Home() {
   return (
     <div className="app-container">
       <div className="main-content">
-        {/* LADO ESQUERDO */}
         <div className="left">
           <h2>
             Your money, simplified <br />
@@ -55,7 +54,6 @@ export default function Home() {
             </div>
           </form>
 
-          {/* CARDS */}
           <div className="metas">
             <h3>Example Goals</h3>
 
@@ -99,7 +97,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* LADO DIREITO */}
         <div className="right">
           <Chart />
         </div>

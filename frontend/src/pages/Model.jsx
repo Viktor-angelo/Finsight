@@ -34,8 +34,14 @@ function Model() {
         }),
       });
 
-      const data = await response.json();
+let data;
 
+try {
+  data = await response.json();
+} catch {
+  alert("Unexpected server response");
+  return;
+}
       if (!response.ok) {
         console.log("BACKEND ERROR:", data);
         alert(data.error || "Error registering");

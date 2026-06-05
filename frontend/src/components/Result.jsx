@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { Wallet, TrendingUp, TrendingDown, Shield, Scale } from "lucide-react";
 
 function Result({ formData }) {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const [showMessage, setShowMessage] = useState(false);
 
@@ -71,15 +71,14 @@ function Result({ formData }) {
     }
   };
 
-  const sendData = () => {
+  const sendData = async () => {
     const payload = {
-        id: Date.now().toString(), 
+      id: Date.now().toString(),
       ...safeData,
       monthly: parseValue(safeData.monthly),
       rent: parseValue(safeData.rent),
       food: parseValue(safeData.food),
       extra: parseValue(safeData.extra),
-
       income: totalIncome,
       expenses: totalExpenses,
       balance: balance,
@@ -87,20 +86,41 @@ function Result({ formData }) {
       month: "2026-05",
     };
 
-    console.log("SAVING AND BROWSING..."); 
-(
+    console.log("SAVING AND BROWSING...");
+
     saveHistory(payload);
 
+    try {
+      const response = await fetch("https://finsight-jer5.onrender.com/financas", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
 
-    fetch("https://finsight-jer5.onrender.com/financas/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    }).catch(() => {});
+      let data;
 
-    navigate("/dashboard");
+      try {
+        data = await response.json();
+      } catch {
+        alert("Unexpected server response");
+        return;
+      }
+
+      if (!response.ok) {
+        console.log("BACKEND ERROR:", data);
+        alert(data?.error || "Error saving data");
+        return;
+      }
+
+      console.log("Saved successfully:", data);
+
+      navigate("/dashboard");
+    } catch (err) {
+      console.log("CONNECTION ERROR:", err);
+      alert("Error connecting to server");
+    }
   };
 
   let message;
@@ -110,7 +130,7 @@ function Result({ formData }) {
       <p>
         Excellent! You're saving{" "}
         <span className="positive">{formatMoney(balance)}</span> (
-        {(savingsRate * 100).toFixed(0)}%) 
+        {(savingsRate * 100).toFixed(0)}%)
       </p>
     );
   } else if (balance >= 0) {
@@ -148,9 +168,7 @@ function Result({ formData }) {
           <p className="newP">
             <TrendingDown className="iconU" size={60} />
             Expenses:{" "}
-            <span
-              className={totalExpenses <= totalIncome ? "positive" : "negative"}
-            >
+            <span className={totalExpenses <= totalIncome ? "positive" : "negative"}>
               {formatMoney(totalExpenses)}
             </span>
           </p>
@@ -214,11 +232,7 @@ function Result({ formData }) {
           </div>
 
           <div className="newGraphic">
-            <NewChart
-              income={totalIncome}
-              expenses={totalExpenses}
-              balance={balance}
-            />
+            <NewChart income={totalIncome} expenses={totalExpenses} balance={balance} />
           </div>
         </div>
       </div>
