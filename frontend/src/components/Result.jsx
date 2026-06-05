@@ -88,11 +88,11 @@ function Result({ formData }) {
     };
 
     console.log("SAVING AND BROWSING..."); 
-
+(
     saveHistory(payload);
 
 
-    fetch("http://localhost:3000/financias", {
+    fetch"https://finsight-jer5.onrender.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -86,7 +86,7 @@ export default function Onboarding() {
         <Step3
           formData={formData}
           setFormData={setFormData}
-          next={() => nextStep(4)} // ✅ corrigido (era reset)
+          next={() => nextStep(4)} 
         />
       )}
 
@@ -94,7 +94,7 @@ export default function Onboarding() {
         <Result
           formData={formData}
           next={() => nextStep(5)}
-          reset={resetOnboarding} // opcional (se quiser botão de recomeçar)
+          reset={resetOnboarding} 
         />
       )}
     </div>

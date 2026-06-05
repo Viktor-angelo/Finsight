@@ -15,14 +15,11 @@ function Step3({ formData, setFormData, next }) {
 
     console.log(finalData);
 
-    // ✅ salva no estado global
     setFormData(finalData);
 
-    // ✅ limpa só os inputs
     setRent("");
     setFood("");
 
-    // ✅ vai pro próximo step (Result)
     next();
   };
 
