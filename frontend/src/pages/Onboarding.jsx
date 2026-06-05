@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 export default function Onboarding() {
   const navigate = useNavigate();
 
-  // ✅ SEM localStorage pro step (corrigido)
+ 
   const [step, setStep] = useState(1);
 
   const [formData, setFormData] = useState(() => {
@@ -37,8 +37,7 @@ export default function Onboarding() {
     }
   });
 
-  // ❌ REMOVIDO reset automático do step
-  // (isso causava comportamento estranho)
+ 
 
   useEffect(() => {
     localStorage.setItem("formData", JSON.stringify(formData));
