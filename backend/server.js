@@ -25,35 +25,138 @@ app.get("/", (req, res) => {
 });
 
 app.get("/users", async (req, res) => {
-  const users = await prisma.user.findMany();
-  res.json(users);
+  try {
+    const users = await prisma.user.findMany();
+    res.json(users);
+  } catch {
+    res.status(500).json({ error: "Error fetching users" });
+  }
 });
 
 app.post("/users", async (req, res) => {
-  const { name, email } = req.body;
+  try {
+    const { name, email, age, password } = req.body;
 
-  const user = await prisma.user.create({
-    data: {
-      name,
-      email,
-    },
-  });
+    if (!name || !email) {
+      return res.status(400).json({ error: "Name and email are required" });
+    }
 
-  res.json(user);
+    const user = await prisma.user.create({
+      data: {
+        name,
+        email,
+        age,
+        password,
+      },
+    });
+
+    res.json(user);
+  } catch {
+    res.status(500).json({ error: "Error creating user" });
+  }
 });
 
 app.post("/login", async (req, res) => {
-  const { email } = req.body;
+  try {
+    const { email } = req.body;
 
-  const user = await prisma.user.findUnique({
-    where: { email },
-  });
+    if (!email) {
+      return res.status(400).json({ error: "Email is required" });
+    }
 
-  if (!user) {
-    return res.status(404).json({ error: "User not found" });
+    const user = await prisma.user.findUnique({
+      where: { email },
+    });
+
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    res.json(user);
+  } catch {
+    res.status(500).json({ error: "Login error" });
   }
+});
 
-  res.json(user);
+/* ===== FINANCAS ROUTES ===== */
+
+app.get("/financas", async (req, res) => {
+  try {
+    const finances = await prisma.finances.findMany();
+    res.json(finances);
+  } catch {
+    res.status(500).json({ error: "Error fetching finances" });
+  }
+});
+
+app.get("/financas/:userId", async (req, res) => {
+  try {
+    const { userId } = req.params;
+
+    const finances = await prisma.finances.findMany({
+      where: { userId },
+    });
+
+    res.json(finances);
+  } catch {
+    res.status(500).json({ error: "Error fetching user finances" });
+  }
+});
+
+app.post("/financas", async (req, res) => {
+  try {
+    const { name, email, monthly, rent, food, extra, month, userId } = req.body;
+
+    if (!name || !email || !monthly || !rent || !food || !month || !userId) {
+      return res.status(400).json({ error: "Missing required fields" });
+    }
+
+    const finance = await prisma.finances.create({
+      data: {
+        name,
+        email,
+        monthly,
+        rent,
+        food,
+        extra,
+        month,
+        userId,
+      },
+    });
+
+    res.json(finance);
+  } catch {
+    res.status(500).json({ error: "Error creating finance" });
+  }
+});
+
+app.put("/financas/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const updated = await prisma.finances.update({
+      where: { id },
+      data: req.body,
+    });
+
+    res.json(updated);
+  } catch {
+    res.status(500).json({ error: "Error updating finance" });
+  }
+});
+
+app.delete("/financas/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    await prisma.finances.delete({
+      where: { id },
+    });
+
+    res.json({ message: "Finance deleted" });
+  } catch {
+    res.status(500).json({ error: "Error deleting finance" });
+  }
 });
 
 const PORT = process.env.PORT || 3000;
