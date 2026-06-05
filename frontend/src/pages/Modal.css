@@ -164,6 +164,11 @@
 
 @media(max-width: 768px){
 
+    .containerCentral{
+        justify-content: flex-start;
+        padding-top: 120px;
+    }
+
     .containerModel {
         padding: 30px 20px;
         border-radius: 20px;
@@ -171,6 +176,7 @@
 
     .containerModel h1 {
         font-size: 2rem;
+        text-align: center;
     }
 
     .btnLogin {
