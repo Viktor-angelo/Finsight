@@ -113,7 +113,8 @@ body {
 }
 
 .rightStep {
-  max-width: 600px;
+  max-width: 800px;
+  max-height: 800px;
   padding: 40px;
   border-radius: 30px;
   background: linear-gradient(135deg,#0A2540 0%,#1E5EFF 50%,#3A86FF 100%);
