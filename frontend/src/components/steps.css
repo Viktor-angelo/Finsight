@@ -10,34 +10,34 @@ body {
 
 .container {
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   background-color: #06141B;
   color: white;
   font-family: 'Poppins', sans-serif;
+
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+
   gap: 40px;
   padding: 40px;
+}
 
-  flex-wrap: wrap;
+.containerElements,
+.rightStep {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .containerElements {
- background: linear-gradient(
-    135deg,
-    #020617 0%,
-    #06141B 50%,
-    #0B2E3F 100%
-  ); 
-  width: 100%;
   max-width: 600px;
+  background: linear-gradient(135deg,#020617 0%,#06141B 50%,#0B2E3F 100%);
   padding: 40px;
   border-radius: 30px;
-  display: flex;
-  flex-direction: column;
   gap: 30px;
-}  
+}
 
 .containerElements h1 {
   font-size: 2.5rem;
@@ -48,26 +48,23 @@ body {
   opacity: 0.7;
 }
 
-/* INPUT */
 .inputWrapper {
   position: relative;
 }
 
 .inputWrapper input {
   width: 100%;
-  color: #fffcfc;
- background: rgba(255, 255, 255, 0.08);
-border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+  border: 2px solid #4F8CFF;
   padding: 12px 12px 12px 40px;
   border-radius: 10px;
   font-size: 1rem;
-  border: 2px solid #4F8CFF;
-  box-shadow: 0 0 10px rgba(79, 140, 255, 0.3);
-
+  box-shadow: 0 0 10px rgba(79,140,255,0.3);
 }
+
 .inputWrapper input:focus {
   outline: none;
-  
 }
 
 .icon {
@@ -84,66 +81,55 @@ border: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 1.2rem;
   border: none;
   cursor: pointer;
-
   color: white;
+  background: linear-gradient(90deg,#3b82f6,#2563eb);
+  box-shadow: 0 10px 25px rgba(59,130,246,0.4);
   transition: 0.3s;
-
-  background: linear-gradient(90deg, #3b82f6, #2563eb);
-box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
-transition: 0.3s;
 }
 
 .containerElements button:hover {
-transform: scale(1.03);
+  transform: scale(1.03);
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
 .logo img {
-  position: relative;
-   transform: rotate(-90deg);
-  transition: transform 0.8s ease;
-  left: 15vh;
   width: 220px;
   height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  
-  border: 3px solid #1e3a8a; 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-
+  transform: rotate(-90deg);
+  transition: transform 0.8s ease;
+  border: 3px solid #1e3a8a;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-img:hover {
+.logo img:hover {
   transform: rotate(270deg) scale(1.10);
-  box-shadow: 0 10px 40px rgba(30, 58, 138, 0.6);
 }
 
 .rightStep {
-  height: 92vh;
-  width: 100%;
-  max-width: 850px;
+  max-width: 600px;
   padding: 40px;
   border-radius: 30px;
-  display: flex;
-  flex-direction: column;
-background: linear-gradient(
-    135deg,
-    #0A2540 0%,
-    #1E5EFF 50%,
-    #3A86FF 100%
-  );
-    box-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
+  background: linear-gradient(135deg,#0A2540 0%,#1E5EFF 50%,#3A86FF 100%);
+  box-shadow: 0 0 40px rgba(59,130,246,0.2);
 }
-.introduction{
-    padding-bottom: 5vh;
-    font-size: 1.2rem;
+
+.introduction {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
 }
 
 .rightStep h1 {
-    padding-bottom: 5vh;
+  margin-bottom: 20px;
   text-align: center;
   font-size: 3rem;
 }
-
 
 .cardItem {
   display: flex;
@@ -151,53 +137,37 @@ background: linear-gradient(
   align-items: center;
   padding: 15px;
   border-radius: 15px;
-margin-bottom: 5vh;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
   transition: 0.3s;
-  background: rgba(255, 255, 255, 0.05);
-border: 1px solid rgba(255, 255, 255, 0.08);
-backdrop-filter: blur(10px);
 }
 
 .cardItem:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.08);
   transform: translateX(5px);
 }
 
 .cardIcon {
-    
   border: 1px solid rgba(255,255,255,0.2);
   padding: 10px;
   border-radius: 12px;
-  color: white;
 }
-@media(max-width:900px){
-  .container{
+
+@media (max-width: 900px) {
+  .container {
     flex-direction: column;
     padding: 20px;
   }
-  .containerElements{
-    flex-direction: column;
-    gap: 40px;
-    margin-bottom: 10vh;
-    padding: 20px;
-  }
+
   .containerElements,
   .rightStep {
     max-width: 100%;
+    padding: 20px;
   }
-  .rightStep{
-  width: 100%;
-  height: 120vh;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-    margin-bottom: 0;
-  border-radius: 30px;
+
+  .rightStep h1 {
+    font-size: 2rem;
   }
-  .rightStep h1{
-    font-size: clamp(40px, 8vw, 90px);
-    right: 0;
-  }
-  
 }
