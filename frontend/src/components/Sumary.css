@@ -349,10 +349,10 @@ gap: 40px;
 .exit{
     padding: 5px;
     height: 8vh;
+    display: flex;
     text-decoration: none;
     border-radius: 50px;
     font-size:1.8rem;
-    padding-top: 2vh;
     text-align: center;
     justify-content: center;
     width: 30vh;
@@ -362,6 +362,7 @@ gap: 40px;
     border: 1px solid rgba(255,255,255,0.3);
 }
 .save{
+  display: flex;
     transition: all 0.3s ease;
      padding: 8px;
     height: 8vh;
