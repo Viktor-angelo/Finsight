@@ -1,22 +1,23 @@
 body{
   overflow-x: hidden;
 }
+
 .initialBody{
   width: 100%;
-   min-height: 100vh;
+  min-height: 100vh;
   height: auto;
   display: flex;
-background: linear-gradient(
+  background: linear-gradient(
     135deg,
     #020617 0%,
     #06141B 50%,
     #0B2E3F 100%
   );
- color: white;
- justify-content: center;
- 
+  color: white;
+  justify-content: center;
   font-family: 'Poppins', sans-serif;
 }
+
 .positive {
   color: #16a34a;
   font-weight: 600;
@@ -31,27 +32,29 @@ background: linear-gradient(
   color: #f59e0b;
   font-weight: 600;
 }
+
 .positive,
 .negative,
 .neutral {
   transition: all 0.3s ease;
 }
+
 .containerResult{
     cursor: pointer;
     margin-left: 5vh;
     padding-left: 10vh;
     max-width: 900px;
-     width: 100%;
-    max-width: 900px;
+    width: 100%;
     padding: 10px;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
 }
+
 .containerResult h1{
-    
     font-size: 3.4rem;
 }
+
 .containerResult h2{
     display: flex;
     width: fit-content; 
@@ -59,32 +62,32 @@ background: linear-gradient(
     cursor: pointer;
     position: relative;
 }
+
 .containerResult h2::after{
     content: "";
     left: 0;
-  bottom: -5px;
-  width: 0%;
+    bottom: -5px;
+    width: 0%;
     height: 2px;
-
     position: absolute;
-     background: #3b82f6;
+    background: #3b82f6;
     transition: 0.3s;
 }
 
 .containerResult h2:hover::after {
   width: 100%;
 }
+
 .sub{
     opacity: 0.6;
     position: relative;
     bottom:3vh;
-    position: relative;
     left: 9vh;
 }
+
 .newP{
     position: relative;
     left: 2vh;
-    
     font-size: 1.6rem;
 }
 
@@ -93,25 +96,25 @@ background: linear-gradient(
     top: 3vh;
     right: 2vh;
 }
-.cardsSumary{
-background: rgba(255, 255, 255, 0.03);
-height: 15vh;
-display: flex;
-margin-top: 20px;
-flex-direction:column;
-margin-bottom: 4vh;
-border-radius: 20px;
-padding-left: 7px;
-width: 100vh;
-gap: 40px;
 
+.cardsSumary{
+  background: rgba(255, 255, 255, 0.03);
+  height: 15vh;
+  display: flex;
+  margin-top: 20px;
+  flex-direction:column;
+  margin-bottom: 4vh;
+  border-radius: 20px;
+  padding-left: 7px;
+  width: 100%;
+  max-width: 900px;
+  gap: 40px;
   box-shadow: 0 0 35px rgba(59, 130, 246, 0.2);
 }
 
 .cardsSumary:hover{
  transform: translateY(-6px) scale(1.02);
- 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+ box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .iconSumary{
@@ -119,21 +122,25 @@ gap: 40px;
     top: 3vh;
     right: 2vh;
 }
+
 .userMessage{
-     box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
-     width: 70vh;
-    border-radius:28px ;
-    padding-left: 3vh;
-     background-color: #09202c;
-    position: relative;
-    right: 1vh;
-    top: 3vh;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+  width: 100%;
+  max-width: 600px;
+  border-radius:28px ;
+  padding-left: 3vh;
+  background-color: #09202c;
+  position: relative;
+  right: 1vh;
+  top: 3vh;
 }
+
 .happy{
     position: relative;
     bottom: 1vh;
     left: 11vh;
 }
+
 .lightB{
     margin: 0;
     padding: 0;
@@ -141,6 +148,7 @@ gap: 40px;
     top: 5vh;
     right: 2vh;
 }
+
 .userMessage p{
     position: relative;
     font-size: 1;
@@ -148,12 +156,13 @@ gap: 40px;
     left: 9vh;
     display: inline;
 }
+
 .userMessage h4{
     font-size: 1.6rem;
     margin: 10px;
     padding: 10px;
-    
 }
+
 .containerRight {
   display: flex;
   flex-direction: column;
@@ -162,7 +171,7 @@ gap: 40px;
   position: relative;
 }
 
- .containerRight{
+.containerRight{
   background: linear-gradient(
     135deg,
     rgba(4, 38, 92, 0.08),
@@ -171,6 +180,7 @@ gap: 40px;
   border: 1px solid rgba(255,255,255,0.05);
   border-radius: 20px;
 }
+
 .containerRight::before {
   content: "";
   position: absolute;
@@ -186,6 +196,7 @@ gap: 40px;
     #3b82f6
   );
 }
+
 .Keep, .Control, .Stay {
   display: flex;
   gap: 15px;
@@ -200,14 +211,13 @@ gap: 40px;
      flex-shrink: 0;  
      border-radius: 100%;
      padding: 5px;
-    margin-top: 18px;
-
+     margin-top: 18px;
 }
+
 .iconUp{
-
      background: linear-gradient(135deg, #22c55e, #4ade80, #16a34a);
-    
 }
+
 .containerRight h4{
     display: flex;
     width: fit-content; 
@@ -215,15 +225,15 @@ gap: 40px;
     cursor: pointer;
     position: relative;
 }
+
 .containerRight h4::after{
     content: "";
     left: 0;
-  bottom: -5px;
-  width: 0%;
+    bottom: -5px;
+    width: 0%;
     height: 2px;
-
     position: absolute;
-     background: #3b82f6;
+    background: #3b82f6;
     transition: 0.3s;
 }
 
@@ -233,12 +243,12 @@ gap: 40px;
 
 .iconShield{
     background: linear-gradient(135deg, #ef4444, #f87171, #dc2626);
-    
-
 }
+
 .Insights{
     padding-left: 3vh;
 }
+
 .newGraphic {
   border-radius: 20px;
   text-align: center;
@@ -248,43 +258,36 @@ gap: 40px;
   align-items: center;
   justify-content: center;
 }
+
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-
- background: rgba(15, 23, 42, 0.6);
+  background: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   align-items: center;
-
   z-index: 999;
 }
+
 .modal {
   padding: 30px;
   border-radius: 16px;
-
   width: 90%;
   max-width: 400px;
-
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-
   animation: fadeIn 0.3s ease;
 }
+
 .modal button {
   padding: 5px 5px;
-
   border: none;
   border-radius: 8px;
-
   background: #3b82f6;
-  
   color: white;
-
   cursor: pointer;
   transition: 0.3s;
 }
@@ -292,6 +295,7 @@ gap: 40px;
 .modal button:hover {
   background: #2563eb;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -302,41 +306,46 @@ gap: 40px;
     transform: translateY(0);
   }
 }
+
 .iconScale{
     right: 17vh;
     background: linear-gradient(135deg, #3b82f6, #60a5fa, #2563eb);
 }
+
 .containerRight h5{
     margin: 0;
     padding: 0;
     font-size: 1.2rem;
     white-space: nowrap;
 }
+
 .containerRight p{
     opacity: 0.7;
     line-height: 1.5;
     position: relative;
 }
+
 .newInsights{
   display: flex;
   align-items: flex-start;
   cursor: pointer;
   gap: 15px;
   transition: all 0.3s ease;
-
 }
 
 .newInsights:hover {
   transform: translateX(5px);
 }
+
 .textContent {
   display: flex;
   padding-left: 10px;
   padding-bottom: 40px;
   flex-direction: column;
 }
+
 .newInsights p{
-    max-width: 70vh;
+    max-width: 100%;
     margin-bottom: 40px;
 }
 
@@ -345,49 +354,53 @@ gap: 40px;
     flex-direction: row;
     gap: 20px;
     padding-top: 3vh;
-    
 }
+
 .exit{
     padding: 5px;
     height: 8vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     border-radius: 50px;
     font-size:1.8rem;
-    text-align: center;
-    justify-content: center;
-    width: 30vh;
+    width: 100%;
+    max-width: 300px;
     transition: all 0.3s ease;
     background: transparent;
     color: #EAEAEA;
     border: 1px solid rgba(255,255,255,0.3);
 }
+
 .save{
-  display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
-     padding: 5px;
+    padding: 5px;
     height: 8vh;
     text-decoration: none;
     border-radius: 50px;
     font-size:1.8rem;
-    text-align: center;
-    justify-content: center;
-    width: 30vh;
+    width: 100%;
+    max-width: 300px;
     background: linear-gradient(135deg, #3B82F6, #1D4ED8);
-  color: white;
+    color: white;
 }
+
 .save:hover{
   box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
-    transform: translateY(-3px);
-
+  transform: translateY(-3px);
 }
+
 .exit:hover{
     opacity: 0.7;
-     background: rgba(255,255,255,0.05);
-
+    background: rgba(255,255,255,0.05);
 }
+
 @media(max-width:900px){
-    .initialBody{
+  .initialBody{
     flex-direction: column;
     padding: 20px;
     gap: 30px;
@@ -395,16 +408,11 @@ gap: 40px;
 
   .containerResult{
     margin: 0;
-
+    padding-left: 0;
   }
+
   .cardsSumary{
     max-width: 100%;
-  }
-  
-  .initialBody{
-    flex-direction: column;
-    padding: 20px;
-    gap: 30px;
   }
 
   .containerRight{
@@ -416,5 +424,4 @@ gap: 40px;
   .containerRight::before{
     display: none; 
   }
-  
 }
