@@ -23,7 +23,7 @@ export default function Navbar() {
       <nav className="nav">
         <ul className="navLinks">
           <li>
-            <Link to="/about">About us</Link>
+            <Link to="/about">Us</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>
