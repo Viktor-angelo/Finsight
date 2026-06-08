@@ -164,8 +164,7 @@ margin-left: 5vh;
   .backFloating{
     display: flex;
     position: relative;
-
-    left: 80%;
+    left: 65%;
 
   }
 
