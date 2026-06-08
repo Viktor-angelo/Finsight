@@ -115,7 +115,7 @@ html, body, #root {
     margin: 0 auto;
     padding: 8px;
     right: 20px;
-    font-size: 18px;
+    font-size: 17px;
   }
   .newLogo{
     display: none !important;
@@ -126,7 +126,7 @@ html, body, #root {
   }
   .logoutBtn{
     position: relative;
-    font-size: 14px;
+    font-size: 12px;
     right: 20px;
   }
 }
