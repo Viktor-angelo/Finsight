@@ -4,7 +4,7 @@ body{
 .initialBody{
   width: 100%;
    min-height: 100vh;
-   margin: 0 auto;
+   margin:  auto;
   height: auto;
   display: flex;
 background: linear-gradient(
