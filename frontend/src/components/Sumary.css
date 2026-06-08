@@ -1,3 +1,6 @@
+body{
+  overflow: hidden;
+}
 .initialBody{
   width: 100%;
    min-height: 100vh;
@@ -348,7 +351,7 @@ gap: 40px;
     text-decoration: none;
     border-radius: 50px;
     font-size:1.8rem;
-    padding-top: 8px;
+    padding-top: 5px;
     text-align: center;
     justify-content: center;
     width: 30vh;
