@@ -162,8 +162,11 @@ margin-left: 5vh;
   }
 
   .backFloating{
-    left: 10px;
-    margin-left: 0;
+    display: flex;
+    position: relative;
+
+    left: 80%;
+
   }
 
 }
