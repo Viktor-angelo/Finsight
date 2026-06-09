@@ -72,7 +72,7 @@ function Step1({ formData, setFormData, next }) {
 
           <div className="cardItem">
             <TrendingUp className="cardIcon" size={40} />
-            <h4> Financial Management </h4>
+            <h4> Finance Control</h4>
             <p className="pFinance">
               Financial Management Take full control of your finances with smart
               insights and simple tools designed to help you track, manage, and
