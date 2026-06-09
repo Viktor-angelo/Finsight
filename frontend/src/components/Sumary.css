@@ -133,7 +133,7 @@ body{
 }
 
 .happy{
-    margin-left: 15px; /* CORRIGIDO */
+    margin-left: 15px;
 }
 
 .lightB{
@@ -405,6 +405,9 @@ body{
 
   .cardsSumary{
     max-width: 100%;
+  }
+  .newP{
+    max-width: 98%;
   }
 
   .containerRight{
