@@ -28,12 +28,13 @@ git clone https://github.com/your-username/finsight.git
 cd finsight
 npm install
 npm start
+````
 
-  Deployment
+##  Deployment
 
 This project is deployed using Vercel (frontend) and a backend server.
 
- Learning Goals
+## Learning Goals
 Understand fullstack development
 Practice authentication systems
 Work with APIs and databases
