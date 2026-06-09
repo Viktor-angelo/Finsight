@@ -14,10 +14,12 @@ function Result({ formData }) {
   const formatMoney = (value) => {
     if (isNaN(value)) return "$0.00";
 
-    return value.toLocaleString("en-US", {
+    const formatted = value.toLocaleString("en-US", {
       style: "currency",
       currency: "USD",
     });
+
+    return formatted.replace("US$", "$");
   };
 
   const parseValue = (value) => {
@@ -91,13 +93,16 @@ function Result({ formData }) {
     saveHistory(payload);
 
     try {
-      const response = await fetch("https://finsight-jer5.onrender.com/financas", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://finsight-jer5.onrender.com/financas",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
         },
-        body: JSON.stringify(payload),
-      });
+      );
 
       let data;
 
@@ -168,7 +173,9 @@ function Result({ formData }) {
           <p className="newP">
             <TrendingDown className="iconU" size={60} />
             Expenses:{" "}
-            <span className={totalExpenses <= totalIncome ? "positive" : "negative"}>
+            <span
+              className={totalExpenses <= totalIncome ? "positive" : "negative"}
+            >
               {formatMoney(totalExpenses)}
             </span>
           </p>
@@ -232,7 +239,11 @@ function Result({ formData }) {
           </div>
 
           <div className="newGraphic">
-            <NewChart income={totalIncome} expenses={totalExpenses} balance={balance} />
+            <NewChart
+              income={totalIncome}
+              expenses={totalExpenses}
+              balance={balance}
+            />
           </div>
         </div>
       </div>
