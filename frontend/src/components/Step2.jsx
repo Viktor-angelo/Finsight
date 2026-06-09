@@ -69,7 +69,7 @@ function Step2({ formData, setFormData, next }) {
           </p>
 
           <div className="cardItem">
-            <TrendingUp className="cardIcon" size={70} />
+            <TrendingUp className="cardIcon" size={40} />
             <h4> Financial Management </h4>
             <p className="pFinance">
               Financial Management Take full control of your finances with smart
@@ -79,7 +79,7 @@ function Step2({ formData, setFormData, next }) {
           </div>
 
           <div className="cardItem">
-            <Wallet className="cardIcon" size={70} />
+            <Wallet className="cardIcon" size={40} />
             <h4>Saving Money</h4>
             <p className="pMoney">
               Build better financial habits by monitoring your spending and
@@ -88,7 +88,7 @@ function Step2({ formData, setFormData, next }) {
           </div>
 
           <div className="cardItem">
-            <Lock className="cardIcon" size={70} />
+            <Lock className="cardIcon" size={40} />
             <h4>Security</h4>
             <p>
               Your data is protected with advanced security measures, ensuring
