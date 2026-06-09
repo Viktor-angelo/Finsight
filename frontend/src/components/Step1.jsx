@@ -90,7 +90,7 @@ function Step1({ formData, setFormData, next }) {
           </div>
 
           <div className="cardItem">
-            <Lock className="cardIcon" size={70} />
+            <Lock className="cardIcon" size={40} />
             <h4>Security</h4>
             <p>
               Your data is protected with advanced security measures, ensuring
