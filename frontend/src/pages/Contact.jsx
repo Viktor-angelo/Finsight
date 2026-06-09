@@ -29,7 +29,7 @@ function Contact (){
 
         <div className="contact-form">
           <h1 id="contact-form-h1">
-            FORM
+            Support
           </h1>
 
         <form action="https://formsubmit.co/angeloviktor885@gmail.com" method="POST">
