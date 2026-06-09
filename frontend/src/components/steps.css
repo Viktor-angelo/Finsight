@@ -161,8 +161,8 @@ body {
 }
 
 .cardIcon svg {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 500px;
 }
 
 @media (max-width: 900px) {
