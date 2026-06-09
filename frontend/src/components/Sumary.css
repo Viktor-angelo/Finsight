@@ -245,6 +245,8 @@ body{
 .newGraphic {
   border-radius: 20px;
   text-align: center;
+  position:relative;
+  bottom:5%;
   padding: 20px;
   backdrop-filter: blur(10px);
   display: flex;
