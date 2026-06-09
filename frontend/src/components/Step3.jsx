@@ -81,7 +81,7 @@ function Step3({ formData, setFormData, next }) {
 
           <div className="cardItem">
             <Wallet className="cardIcon" size={40} />
-            <h4>Money Control</h4>
+            <h4>Expense Control</h4>
             <p className="pMoney">
               Build better financial habits by monitoring your spending and
               identifying opportunities to save more every day.
