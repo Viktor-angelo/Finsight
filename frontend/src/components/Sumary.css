@@ -246,7 +246,7 @@ body{
   border-radius: 20px;
   text-align: center;
   position:relative;
-  bottom:8%;
+  bottom:10%;
   padding: 20px;
   backdrop-filter: blur(10px);
   display: flex;
