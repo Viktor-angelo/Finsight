@@ -212,6 +212,7 @@ body{
 }
 
 .containerRight h4{
+    font-size: 20px;
     display: flex;
     width: fit-content; 
     margin: 0;  
@@ -240,6 +241,8 @@ body{
 
 .Insights{
     padding-left: 3vh;
+    font-size:16px;
+
 }
 
 .newGraphic {
