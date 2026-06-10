@@ -86,10 +86,15 @@ cd backend
 npm run dev
 ## Project Structure
 Finsight/
+
  ├── backend/
+ 
  ├── frontend/
+ 
  ├── Images/
+ 
  └── README.md
+ 
 ## Deployment
 
 The frontend is deployed on Vercel, while the backend runs on a separate server, enabling a fullstack architecture with real-time data handling.
