@@ -239,11 +239,6 @@ body{
     background: linear-gradient(135deg, #ef4444, #f87171, #dc2626);
 }
 
-.Insights{
-    padding-left: 3vh;
-    font-size:12px;
-
-}
 
 .newGraphic {
   border-radius: 20px;
@@ -326,6 +321,7 @@ body{
   display: flex;
   align-items: flex-start;
   cursor: pointer;
+  padding-left: 3vh;
   gap: 15px;
   position: relative;
   bottom: 20px;
@@ -346,6 +342,11 @@ body{
 .newInsights p{
     max-width: 100%;
     margin-bottom: 40px;
+    font-size: 12px;
+}
+.newInsights h5{
+  
+    font-size:12px;
 }
 
 .sumaryButtons {
