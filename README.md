@@ -26,7 +26,7 @@ Financial dashboard with real-time data
 Expense and income tracking
 Data visualization with charts
 Clean, responsive, and user-friendly interface
-🛠 Tech Stack
+ Tech Stack
 
 Frontend
 
