@@ -6,23 +6,23 @@ FinSight is a modern financial management web application designed to help users
 
 ### Home
 
-![Home](./Images/preview-finsight-1.jpeg)
+![Home](./Images/preview-finsight-1.png)
 
 ### Form
 
-![Form](./Images/preview-finsight-2.jpeg)
+![Form](./Images/preview-finsight-2.png)
 
 ### Summary
 
-![Summary](./Images/preview-finsight-3.jpeg)
+![Summary](./Images/preview-finsight-3.png)
 
 ### Dashboard
 
-![Dashboard](./Images/preview-finsight-4.jpeg)
+![Dashboard](./Images/preview-finsight-4.png)
 
 ### Mobile View
 
-![Mobile](./Images/preview-mobile-finsight-5.jpeg)
+![Mobile](./Images/preview-mobile-finsight-5.png)
 
 ## Features
 
