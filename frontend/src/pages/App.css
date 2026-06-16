@@ -12,7 +12,7 @@
   }
 }
 @keyframes entrando {
-  form{
+  from{
     transform: translateX(100%);
   }
 }
