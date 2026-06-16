@@ -3,6 +3,28 @@
   margin: 0;
   padding: 0;
 }
+@view-transition{
+  navigation: auto
+}
+@keyframes saindo{
+  to{
+    transform: translateX(-100%);
+  }
+}
+@keyframes entrando {
+  form{
+    transform: translateX(100%);
+  }
+}
+::view-transition-group(root){
+  animation-duration: 1s;
+}
+::view-transition-old(root){
+  animation-name: saindo;
+}
+::view-transition-new(root){
+  animation-name: entrando;
+}
 
 html, body {
   margin: 0;
